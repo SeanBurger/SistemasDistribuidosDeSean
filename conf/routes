@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+# Mis Servicios Web
+
+GET     /multiplicacion/:a/:b    controllers.Application.getMultiplicacion(a: Int,b: Int)
+
+GET     /palindromo/:word    controllers.Application.getPalindromo(word: String)
+
+GET    /capital/:word       controllers.Application.getCapital(word:String)
+
+GET /embajada/:word        controllers.Application.getEmbajada(word:String)
+
+GET /conversiondolarpeso/:a controllers.Application.getConversionDolarPeso(a:Int)
+
+GET /conversioncf/:a     controllers.Application.getConversionCF(a:Int)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
